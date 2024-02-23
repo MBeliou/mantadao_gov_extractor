@@ -13,5 +13,9 @@ Proposal IDs, used RPC and output file can be changed in src/index.js
 pnpm install
 
 # Run the script
+## Export all governance votes + proposal date
 pnpm gov
+
+## Export all stakers
+pnpm stake
 ```

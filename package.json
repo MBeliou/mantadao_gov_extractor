@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "type": "module",
-  "main": "src/index.js",
+  "main": "src/bin/index.js",
   "scripts": {
-    "gov": "node src/index.js",
+    "gov": "node src/bin/gov.js",
+    "stake": "node src/bin/stake.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
