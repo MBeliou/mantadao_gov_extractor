@@ -7,6 +7,7 @@
   "scripts": {
     "gov": "node src/bin/gov.js",
     "stake": "node src/bin/stake.js",
+    "supply": "node src/bin/supply.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -24,6 +25,7 @@
   },
   "devDependencies": {
     "@cosmwasm/ts-codegen": "^0.35.7",
+    "chain-registry": "^1.28.6",
     "cosmjs-types": "^0.9.0"
   }
 }

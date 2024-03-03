@@ -1,19 +1,22 @@
 // @ts-check
 
 import { CosmWasmClient } from "@cosmjs/cosmwasm-stargate";
-import { HttpBatchClient, Tendermint34Client } from "@cosmjs/tendermint-rpc";
+import { Comet38Client, HttpBatchClient, Tendermint34Client, Tendermint37Client } from "@cosmjs/tendermint-rpc";
 
 export class Querier {
   client;
+  tm;
   contractAddress;
 
   /**
    *
    * @param {CosmWasmClient} client
    * @param {string} address
+   * @param {Tendermint34Client | Tendermint37Client | Comet38Client} tm
    */
-  constructor(client, address) {
+  constructor(client, tm, address) {
     this.client = client;
+    this.tm = tm;
     this.contractAddress = address;
   }
 
@@ -29,7 +32,7 @@ export class Querier {
 
     const cosmwasmClient = await CosmWasmClient.create(tm);
 
-    return new Querier(cosmwasmClient, contract);
+    return new Querier(cosmwasmClient, tm, contract);
   }
 
   /**

@@ -18,4 +18,7 @@ pnpm gov
 
 ## Export all stakers
 pnpm stake
+
+## Export supply for major currencies accross cosmos (Kuji, Osmosis, Neutron)
+pnpm supply
 ```
